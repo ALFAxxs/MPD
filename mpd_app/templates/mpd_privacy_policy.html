@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPD - Maxfiylik Siyosati</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header, footer {
+      background: #1e88e5;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #1565c0;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+    h2 {
+      color: #444;
+      margin-top: 1.5rem;
+    }
+    p {
+      line-height: 1.6;
+      color: #333;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MPD - My Personal Doctor</h1>
+    <p>Maxfiylik Siyosati</p>
+  </header>
+  <nav>
+    <a href="{% url 'home:offerta' %}">Ommaviy Oferta</a>
+    <a href="{% url 'home:privacy' %}">Maxfiylik Siyosati</a>
+  </nav>
+  <main>
+    <p>
+      MPD-My Personal Doctor
+    </p>
+     <p>
+        Oxirgi yangilangan sana: 1-may, 2025-yil
+      </p>
+    <h2>1. Yig‘iladigan ma’lumotlar</h2>
+    <p>
+      Biz foydalanuvchilardan quyidagi ma’lumotlarni yig‘amiz:
+    </p>
+
+    <p>
+     a. Foydalanuvchi tomonidan taqdim etiladigan ma’lumotlar:
+    <p>
+     <p>
+        - To‘liq ism va familiya
+    </p>
+    <p>
+        - Elektron pochta manzili
+    </p>
+    <p>
+        - Telefon raqami
+    </p>
+    <p>
+        - Profil rasmi (ixtiyoriy)
+    </p>
+    <p>
+          - Manzil yoki geolokatsiya (ruxsat berilganda)
+    </p>
+    <p>
+          - Tibbiy ma’lumotlar (agar foydalanuvchi kiritgan bo‘lsa)
+    </p>
+    <br>
+      <p>
+          b. Avtomatik tarzda yig‘iladigan ma’lumotlar:
+      </p>
+      <p>
+         - Qurilma identifikatori va texnik xususiyatlari
+      </p>
+      <p>
+          - IP manzil
+      </p>
+      <p>
+        - Ilovadan foydalanish holati, loglar va tahliliy ma’lumotlar
+      </p>
+      <p>
+          - GPS ma’lumotlari (geolokatsiya)
+      </p>
+
+    <h2>2. Ma’lumotlardan foydalanish maqsadi</h2>
+    <p>
+Yig‘ilgan ma’lumotlar quyidagi qonuniy maqsadlarda ishlatiladi:    </p>
+    <p>
+- Ilova funksiyalarini taqdim etish (doktor va foydalanuvchi o‘rtasida muloqot)    </p>
+    <p>
+- Geolokatsiya asosida eng yaqin shifokorni topish    </p>
+    <p>
+- Profilni boshqarish va xizmatni shaxsiylashtirish
+    </p>
+      <p>
+          - Tibbiy xizmatlar haqida bildirishnomalar yuborish
+      </p>
+      <p>
+            - Texnik yordam va qo‘llab-quvvatlash ko‘rsatish
+      </p>
+      <p>
+        - Xavfsizlik va yuridik talablarni bajarish
+      </p>
+    <h2>3. Uchinchi tomonlarga uzatilishi</h2>
+    <p>
+        Foydalanuvchi ma’lumotlari uchinchi tomonlarga quyidagi hollarda uzatilishi mumkin:
+    </p>
+    <p>   - Tibbiy xizmat ko‘rsatuvchilar (faqat foydalanuvchining roziligi bilan)    </p>
+    <p>   - Xizmat ko‘rsatuvchi texnik provayderlar (server, SMS/email xizmatlari)
+    </p>
+    <p>  - Qonuniy talab asosida (sud, huquq-tartibot organlari)</p>
+      <p>- Foydalanuvchi roziligi asosida</p>
+      <p> Hech qachon foydalanuvchi ma’lumotlari tijorat maqsadida uchinchi tomonlarga sotilmaydi. </p>
+
+    <h2>4. Xavfsizlik choralari</h2>
+    <p>Foydalanuvchi ma’lumotlari quyidagi xavfsizlik choralariga muvofiq himoya qilinadi:
+    </p>
+    <p>- Ma’lumotlarni shifrlash (HTTPS, SSL, AES texnologiyalari)
+    </p>
+    <p>- Avtorizatsiya va autentifikatsiya tizimlari
+    </p>
+      <p>- Server darajasida xavfsizlik devorlari (firewall)</p>
+      <h2>5. Ma'lumotlarni saqlash muddati</h2>
+    <p>Foydalanuvchining shaxsiy ma’lumotlari xizmatdan foydalanish davri mobaynida, va/yoki
+qonuniy majburiyatlarga rioya qilish uchun zarur bo‘lgan muddat davomida saqlanadi.
+    </p>
+      <p>
+          Foydalanuvchi o‘z hisobini o‘chirganidan so‘ng, ma’lumotlar belgilangan qonuniy muddat
+ichida butunlay o‘chiriladi.
+      </p>
+      <h2>6. Foydalanuvchi huquqlari</h2>
+      <p>
+          Foydalanuvchilar quyidagi huquqlarga ega:
+      </p>
+      <p>
+          - O‘z ma’lumotlarini ko‘rish va o‘zgartirish
+      </p>
+      <p>
+          - Ma’lumotlarni o‘chirishni so‘rash (“right to be forgotten”)
+      </p>
+      <p>
+          - Ma’lumotlar yig‘ilishiga rozilikni bekor qilish
+      </p>
+      <p>
+          - Ma’lumotlarni boshqa xizmatga ko‘chirishni so‘rash (Data portability)
+      </p>
+      <p>
+          Mazkur huquqlardan foydalanish uchun foydalanuvchi bizga quyidagi aloqa ma’lumotlari
+orqali murojaat qilishi mumkin
+      </p>
+      <h2>7. 13 yoshdan kichiklar uchun maxfiylik</h2>
+      <p>Ilova 13 yoshdan kichik foydalanuvchilarga mo‘ljallanmagan. Agar biz 13 yoshdan kichik
+foydalanuvchidan ma’lumot olinganini aniqlasak, uni zudlik bilan o‘chirib tashlaymiz.</p>
+      <h2>8. Siyosatga o‘zgartirishlar</h2>
+      <p>Biz ushbu Maxfiylik Siyosatini istalgan vaqtda yangilash huquqini saqlab qolamiz.
+O‘zgarishlar haqida foydalanuvchiga ilova orqali yoki email orqali xabar beriladi.</p>
+      <p>Yangilangan versiya “Oxirgi yangilanish sanasi” orqali belgilanadi.</p>
+      <h2>9. Aloqa</h2>
+      <p>Maxfiylik siyosati yoki shaxsiy ma’lumotlar bo‘yicha savollar uchun biz bilan bog‘laning:</p>
+    <p>
+      Oxirgi yangilanish: 2025-yil 2-may.
+    </p>
+  </main>
+  <footer>
+    &copy; 2025 MPD. Barcha huquqlar himoyalangan.
+      <p> Aloqa: <a href="mailto:mypersonaldoctoruz@gmail.com">mypersonaldoctoruz@gmail.com</a></p>
+  </footer>
+</body>
+</html>
