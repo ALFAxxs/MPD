@@ -1,147 +1,97 @@
-<!DOCTYPE html>
+{% extends 'base.html'%}
+{% block content%}
 {% load static %}
-<html lang="uz">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MPD - Ommaviy offerta</title>
-<link rel="icon" href="{% static 'images/favicon.ico' %}">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-    }
-    header, footer {
-      background: #1e88e5;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      background: #1565c0;
-      padding: 0.5rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      border-radius: 8px;
-    }
-    h1 {
-      font-size: 2rem;
-      color: #333;
-    }
-    h2 {
-      color: #444;
-      margin-top: 1.5rem;
-    }
-    p {
-      line-height: 1.6;
-      color: #333;
-    }
-    @media (max-width: 600px) {
-      main {
-        padding: 1rem;
-      }
-      nav a {
-        display: block;
-        margin: 0.5rem 0;
-      }
-    }
-  </style>
-</head>
-<body>
+
   <header>
     <h1>MPD - My Personal Doctor</h1>
     <p>Ommaviy Offerta</p>
+
   </header>
-  <nav>
+  <nav class="bg-blue-800 p-2 text-center">
     <a href="{%url 'home:offerta' %}">Ommaviy Oferta</a>
     <a href="{%url 'home:privacy' %}">Maxfiylik Siyosati</a>
   </nav>
   <main>
-    <h2>1. Kirish MPD (My Personal Doctor) </h2>
-    <p>
-         Zamonaviy tibbiy xizmat ko'rsatish platformasi bo'lib, shifokorlar va bemorlar o'rtasidagi muloqotni soddalashtirish va optimallashtirishga mo'ljallangan. Dastur quyidagi ikkita asosiy bo‘limdan iborat:
-        <h4>    MPD Work – shifokorlar uchun professional platforma.</h4>
-        <h4>	   MPD Client – bemorlar uchun qulay va intuitiv interfeysga ega dastur.</h4>
-    </p>
-    <p>MPD orqali foydalanuvchilar o'z shaxsiy ma'lumotlarini kiritgan holda ro'yxatdan o'tishlari va platformaning imkoniyatlaridan to'liq foydalanishlari mumkin.</p>
+    <div class="bg-white p-6 my-6 text-left">
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">
+        1. Kirish – MPD (My Personal Doctor)
+      </h2>
 
-    <h2>2. MPD Dasturining Asosiy Xususiyatlari</h2>
-    <p>
-        •	Geolokatsiya orqali shifokor qidirish – Bemorlar o‘zlariga eng yaqin shifokorni aniqlash imkoniyatiga ega bo‘ladilar.    
-    </p>
-    <p>
-        •	Onlayn chat orqali bog‘lanish – Shifokorlar va bemorlar o‘zaro dastur ichida real vaqt rejimida muloqot qilishlari mumkin.
-    </p>
-    <p>
-        •	Shaxsiy profil – Foydalanuvchilar o‘z shaxsiy ma’lumotlarini, tibbiy tarixini va aloqa ma’lumotlarini saqlashlari mumkin.
-    </p>
-    <p>
-        •	Xavfsizlik va maxfiylik – Barcha foydalanuvchilarning shaxsiy ma’lumotlari himoyalangan va faqat ruxsat etilgan shaxslar uchun mavjud.
-    </p>
+      <p class="text-gray-700 mb-4">
+        MPD – bu zamonaviy tibbiy xizmat ko'rsatish platformasi bo'lib, shifokorlar va bemorlar o'rtasidagi muloqotni soddalashtirish va optimallashtirishga mo'ljallangan. Dastur quyidagi ikkita asosiy bo‘limdan iborat:
+      </p>
 
-    <h2>3. MPD Dasturidan Foydalanish Shartlari</h2>
-    <p>
-        •	Foydalanish faqat ro‘yhatdan o‘tgan shaxslar uchun ruxsat etiladi.
-    </p>
-    <p>
-        •	MPD orqali beriladigan maslahatlar kasallik tashxisini aniqlash yoki davolashni o‘rnini bosmaydi.
-    </p>
-    <p>   •	MPD ma’muriyati shifokorlar va bemorlar o‘rtasidagi yozishmalarni maxfiy saqlashga majburdir.
-    </p>
-    <p>  •	MPD foydalanuvchilari kiritgan har qanday ma'lumot to‘g‘riligiga o‘zlari javobgardirlar.
-    </p>
+      <ul class="list-disc pl-6 text-gray-800 mb-4">
+        <li><strong>MPD Work</strong> – shifokorlar uchun professional platforma.</li>
+        <li><strong>MPD Client</strong> – bemorlar uchun qulay va intuitiv interfeysga ega dastur.</li>
+      </ul>
 
-    <h2>4. Mas'uliyatni Cheklash</h2>
-    <p>•	MPD shifokor va bemor o‘rtasidagi aloqa vositasi bo‘lib, ko‘rsatilayotgan tibbiy xizmat sifatiga bevosita javobgar emas.
-    </p>
-    <p>•	Shifokorlar tomonidan berilgan maslahatlar ularning individual bilim va tajribalariga asoslangan bo‘lib, MPD ma’muriyati ushbu maslahatlar mazmuni uchun javobgarlik olmaydi.
-    </p>
-    <p>•	MPD dasturi faqat aloqa vositasi bo‘lib, foydalanuvchilarning harakatlari uchun javobgar hisoblanmaydi.
-    </p>
+      <p class="text-gray-700">
+        MPD orqali foydalanuvchilar o'z shaxsiy ma'lumotlarini kiritgan holda ro'yxatdan o'tishlari va platformaning imkoniyatlaridan to'liq foydalanishlari mumkin.
+      </p>
 
-    <h2>5. Maxfiylik Siyosati</h2>
-    <p>
-        •	MPD foydalanuvchilarining shaxsiy ma'lumotlari uchinchi shaxslarga oshkor qilinmaydi.
-    </p>
-    <p>
-        •	Foydalanuvchilar o‘z ma'lumotlarini istalgan vaqtda yangilash yoki o‘chirish huquqiga ega.
-    </p>
-    <p>
-        •	MPD platformasi shaxsiy ma'lumotlarni zamonaviy himoya usullari bilan saqlaydi va shifrlaydi.
-    </p>
 
-    <h2>6. Yakuniy Qoidalar</h2>
-    <p>•	MPD platformasidan foydalanish ushbu offerta shartlariga avtomatik rozilik bildirgan hisoblanadi.
-    </p>
-    <p>•	Ushbu offerta shartlari istalgan vaqtda yangilanishi mumkin.
-    </p>
-    <p>•	MPD dasturidan foydalanish bo‘yicha qo‘shimcha savollar yuzasidan rasmiy aloqa kanallari orqali bog‘lanish mumkin.
-    </p>
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">
+        2. MPD Dasturining Asosiy Xususiyatlari</h2>
+      <p class="text-gray-700 mb-4">
+          •	Geolokatsiya orqali shifokor qidirish – Bemorlar o‘zlariga eng yaqin shifokorni aniqlash imkoniyatiga ega bo‘ladilar.
+      </p>
+      <p class="text-gray-700 mb-4">
+          •	Onlayn chat orqali bog‘lanish – Shifokorlar va bemorlar o‘zaro dastur ichida real vaqt rejimida muloqot qilishlari mumkin.
+      </p>
+      <p class="text-gray-700 mb-4">
+          •	Shaxsiy profil – Foydalanuvchilar o‘z shaxsiy ma’lumotlarini, tibbiy tarixini va aloqa ma’lumotlarini saqlashlari mumkin.
+      </p>
+      <p class="text-gray-700 mb-4">
+          •	Xavfsizlik va maxfiylik – Barcha foydalanuvchilarning shaxsiy ma’lumotlari himoyalangan va faqat ruxsat etilgan shaxslar uchun mavjud.
+      </p>
 
-    <p>
-      Oxirgi yangilanish: 2025-yil 2-may.
-    </p>
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">
+        3. MPD Dasturidan Foydalanish Shartlari</h2>
+      <p class="text-gray-700 mb-4">
+          •	Foydalanish faqat ro‘yhatdan o‘tgan shaxslar uchun ruxsat etiladi.
+      </p>
+      <p class="text-gray-700 mb-4">
+          •	MPD orqali beriladigan maslahatlar kasallik tashxisini aniqlash yoki davolashni o‘rnini bosmaydi.
+      </p>
+      <p class="text-gray-700 mb-4">   •	MPD ma’muriyati shifokorlar va bemorlar o‘rtasidagi yozishmalarni maxfiy saqlashga majburdir.
+      </p>
+      <p class="text-gray-700 mb-4">  •	MPD foydalanuvchilari kiritgan har qanday ma'lumot to‘g‘riligiga o‘zlari javobgardirlar.
+      </p>
+
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">
+        4. Mas'uliyatni Cheklash</h2>
+      <p class="text-gray-700 mb-4">•	MPD shifokor va bemor o‘rtasidagi aloqa vositasi bo‘lib, ko‘rsatilayotgan tibbiy xizmat sifatiga bevosita javobgar emas.
+      </p>
+      <p class="text-gray-700 mb-4">•	Shifokorlar tomonidan berilgan maslahatlar ularning individual bilim va tajribalariga asoslangan bo‘lib, MPD ma’muriyati ushbu maslahatlar mazmuni uchun javobgarlik olmaydi.
+      </p>
+      <p class="text-gray-700 mb-4">•	MPD dasturi faqat aloqa vositasi bo‘lib, foydalanuvchilarning harakatlari uchun javobgar hisoblanmaydi.
+      </p>
+
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">
+        5. Maxfiylik Siyosati</h2>
+      <p class="text-gray-700 mb-4">
+          •	MPD foydalanuvchilarining shaxsiy ma'lumotlari uchinchi shaxslarga oshkor qilinmaydi.
+      </p>
+      <p  class="text-gray-700 mb-4">
+          •	Foydalanuvchilar o‘z ma'lumotlarini istalgan vaqtda yangilash yoki o‘chirish huquqiga ega.
+      </p>
+      <p  class="text-gray-700 mb-4">
+          •	MPD platformasi shaxsiy ma'lumotlarni zamonaviy himoya usullari bilan saqlaydi va shifrlaydi.
+      </p>
+
+      <h2 class="text-2xl font-bold text-blue-700 mb-4">
+        6. Yakuniy Qoidalar</h2>
+      <p  class="text-gray-700 mb-4">•	MPD platformasidan foydalanish ushbu offerta shartlariga avtomatik rozilik bildirgan hisoblanadi.
+      </p>
+      <p  class="text-gray-700 mb-4">•	Ushbu offerta shartlari istalgan vaqtda yangilanishi mumkin.
+      </p>
+      <p  class="text-gray-700 mb-4">•	MPD dasturidan foydalanish bo‘yicha qo‘shimcha savollar yuzasidan rasmiy aloqa kanallari orqali bog‘lanish mumkin.
+      </p>
+
+      <p  class="text-gray-700 mb-4">
+        Oxirgi yangilanish: 2025-yil 2-may.
+      </p>
+    </div>
   </main>
-  <footer>
-    &copy; 2025 MPD. Barcha huquqlar himoyalangan.
-          <p> Aloqa: <a href="mailto:mypersonaldoctoruz@gmail.com">mypersonaldoctoruz@gmail.com</a></p>
-  </footer>
-</body>
-</html>
+{%endblock%}

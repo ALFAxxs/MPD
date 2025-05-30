@@ -1,0 +1,64 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+.logo {
+  height: 50px;
+  width: auto;
+}
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header, footer {
+      background: #1e88e5;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+    h2 {
+      color: #444;
+      margin-top: 1.5rem;
+    }
+    p {
+      line-height: 1.6;
+      color: #333;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 1rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+.my-custom-nav {
+  background-color: #1565c0;
+}

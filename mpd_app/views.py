@@ -8,3 +8,7 @@ def offerta_view(request):
 def privacy_policy(request):
     return render(request, 'mpd_privacy_policy.html')
 # Create your views here.
+
+
+def home(request):
+    return render(request, 'home.html')
